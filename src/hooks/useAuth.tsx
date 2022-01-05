@@ -109,6 +109,7 @@ function AuthProvider({ children }: AuthProviderData) {
         }
       );
     } catch (error) {
+      throw new Error(error as any);
     } finally {
       setUser({} as User);
       setUserToken("");
